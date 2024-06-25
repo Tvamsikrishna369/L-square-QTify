@@ -18,10 +18,22 @@
 
 .searchButton{
     border-radius: 0px 8px 8px 0px;
-    /* border-radius: 8px; */
+    border-radius: 8px;
     border-left: none;
     border: 1px solid var(--clolor-black);
-    height: 10%;
+    height: 48PX;
+    width: 66PX;
     cursor: pointer;
     padding: 20px 20px;
 }
+
+/* .searchButton{
+    width: 66px;
+    height: 48px;
+    top: 13px;
+    left: 938px;
+    gap: 0px;
+    border-radius: 0px 16px 16px 0px;
+    border: 1px;
+    opacity: 0px;
+} */
