@@ -1,0 +1,27 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+    justify-content: center;
+}
+
+.search{
+    width: 502px;
+    height: 10%;
+    border: 1px solid var(--color-black);
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 14px 20px;
+}
+
+.searchButton{
+    border-radius: 0px 8px 8px 0px;
+    /* border-radius: 8px; */
+    border-left: none;
+    border: 1px solid var(--clolor-black);
+    height: 10%;
+    cursor: pointer;
+    padding: 20px 20px;
+}
