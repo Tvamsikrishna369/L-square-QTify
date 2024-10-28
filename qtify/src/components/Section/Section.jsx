@@ -3,7 +3,6 @@ import { CircularProgress } from '@mui/material';
 import Card from "../Card/Card";
 import styles from "./Section.module.css"
 import Carousel from '../Carousel/Carousel';
-import { Album } from '@mui/icons-material';
 
 const Section=({type,title,data,toggle=true})=> {
 
@@ -27,11 +26,28 @@ const Section=({type,title,data,toggle=true})=> {
             </h4>
         </div>
 
+        {/* {data.length? (
+                    <div className={styles.sectionInnerWrapper}>
+                    {!carouselToggle?(
+                        <div className={styles.showAllWrapper}>
+                            {data.map((album) => (<Card data={album} type={type} key={album.id} />))}
+                        </div>
+                    ):(
+                        <div>
+                          <Carousel data={data} renderCardComponent={(data)=><Card data={data} type={type}/>}/>
+                        </div>  
+                    )}
+                </div>
+        ): (
+            <div className={styles.progressBar}>
+            <CircularProgress />
+            </div>
+        )} */}
+
         <div className={styles.sectionInnerWrapper}>
             {!carouselToggle?(
                 <div className={styles.showAllWrapper}>
-                    {data.map((album) => (<Card data={album} />))}
-                    <Card/>
+                    {data.map((album) => (<Card data={album} type={type} key={album.id} />))}
                 </div>
             ):(
                 <div>
@@ -59,8 +75,6 @@ const Section=({type,title,data,toggle=true})=> {
             <CircularProgress />
             </div>
         )} */}
-
-        {/* <Card/> */}
 
     </div>
   )

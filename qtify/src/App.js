@@ -41,7 +41,6 @@ function App() {
       <Navbar/>
       <Hero />
       
-      {/* <Section/> */}
       <div className={StyleSheet.sectionWrapper}>
         <Section type = "album" title="Top Albums" data={topAlbumSongs}/>
         <Section type='album' title='New Albums' data={newAlbumSongs}/>
