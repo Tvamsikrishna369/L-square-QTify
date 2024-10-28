@@ -12,6 +12,8 @@ const Hero=()=>{
                 </div>
                 <img className={styles.HeroImage} src={HeroImage} alt="headphone"/>
             </section>
+
+
         </>
     )
 }
