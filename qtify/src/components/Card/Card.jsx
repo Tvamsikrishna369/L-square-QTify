@@ -35,16 +35,16 @@ function Card({ data, type }) {
     case "album": {
       const { image, follows, title, songs } = data;
       return (
-        // <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
+        <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
           <div className={styles.wrapper}>
             <div className={styles.card}>
               <img src={image} alt="album" />
               <div className={styles.banner}>
-                {/* <Chip
+                <Chip
                   label={`${follows} Follows`}
                   className={styles.chip}
                   size="small"
-                /> */}
+                />
                 <Chip/>
                 <div className={styles.Chip}>
                     {`${follows} Follows`}
@@ -55,29 +55,28 @@ function Card({ data, type }) {
               <p>{title}</p>
             </div>
           </div>
-        // </Tooltip>
+        </Tooltip>
       );
     }
 
-    // case "song": {
-    //   const { image, likes, title, songs } = data;
-    //   return (
-    //     // no tooltip required here according to figma provided
-    //     <div className={styles.wrapper}>
-    //       <div className={styles.card}>
-    //         <img src={image} alt="album" loading="lazy" />
-    //         <div className={styles.banner}>
-    //           <div className={styles.pill}>
-    //             <p>{likes} Likes</p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className={styles.titleWrapper}>
-    //         <p>{title}</p>
-    //       </div>
-    //     </div>
-    //   );
-    // }
+    case "song": {
+      const { image, likes, title, songs } = data;
+      return (
+        <div className={styles.wrapper}>
+          <div className={styles.card}>
+            <img src={image} alt="album" loading="lazy" />
+            <div className={styles.banner}>
+              <div className={styles.pill}>
+                <p>{likes} Likes</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.titleWrapper}>
+            <p>{title}</p>
+          </div>
+        </div>
+      );
+    }
 
     default:
       return <></>;

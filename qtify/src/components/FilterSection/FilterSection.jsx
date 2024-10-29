@@ -1,12 +1,8 @@
 import React from 'react'
 import styles from "./FilterSection.module.css";
-// import Section from '../Section/Section';
-// import Section from '../Section/Section';
-// import BasicTabs from '../BasicTabs/BasicTabs';
 import BasicTabs from '../BasicTabs/BasicsTabs';
 import Carousel from '../Carousel/Carousel';
 import Card from '../Card/Card';
-// import { CircularProgress } from '@mui/material';
 import { CircularProgress } from '@mui/material';
 
 const FilterSection = ({type, title, filteredData, handleChangeIndex}) => {

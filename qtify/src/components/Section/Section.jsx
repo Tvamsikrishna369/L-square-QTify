@@ -110,12 +110,11 @@ const Section=({type,title,data,toggle=true})=> {
             </h4>
         </div>
         
-        {/* {data.length?( */}
+        {data.length?(
             <div className={styles.sectionInnerWrapper}>
             {!carouselToggle?(
                 <div className={styles.showAllWrapper}>
                 {data.map((album)=>(
-                    //show card here
                     <Card data={album} type={type} key={album.id}/>
                 ))}
                 </div>
@@ -125,11 +124,11 @@ const Section=({type,title,data,toggle=true})=> {
               </div>  
             )}
             </div>
-        {/* ):( */}
-            {/* <div className={styles.progressBar}> */}
-            {/* <CircularProgress /> */}
-            {/* </div> */}
-        {/* )} */}
+        ):(
+            <div className={styles.progressBar}>
+            <CircularProgress />
+            </div>
+        )}
 
     </div>
   )
