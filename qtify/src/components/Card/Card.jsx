@@ -45,7 +45,7 @@ function Card({ data, type }) {
                   className={styles.chip}
                   size="small"
                 /> */}
-                {/* <Chip/> */}
+                <Chip/>
                 <div className={styles.Chip}>
                     {`${follows} Follows`}
                 </div>
@@ -59,25 +59,25 @@ function Card({ data, type }) {
       );
     }
 
-    case "song": {
-      const { image, likes, title, songs } = data;
-      return (
-        // no tooltip required here according to figma provided
-        <div className={styles.wrapper}>
-          <div className={styles.card}>
-            <img src={image} alt="album" loading="lazy" />
-            <div className={styles.banner}>
-              <div className={styles.pill}>
-                <p>{likes} Likes</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.titleWrapper}>
-            <p>{title}</p>
-          </div>
-        </div>
-      );
-    }
+    // case "song": {
+    //   const { image, likes, title, songs } = data;
+    //   return (
+    //     // no tooltip required here according to figma provided
+    //     <div className={styles.wrapper}>
+    //       <div className={styles.card}>
+    //         <img src={image} alt="album" loading="lazy" />
+    //         <div className={styles.banner}>
+    //           <div className={styles.pill}>
+    //             <p>{likes} Likes</p>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div className={styles.titleWrapper}>
+    //         <p>{title}</p>
+    //       </div>
+    //     </div>
+    //   );
+    // }
 
     default:
       return <></>;
