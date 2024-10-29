@@ -1,31 +1,3 @@
-// import React from "react";
-// import styles from "./Card.module.css"
-// import {Chip, Tooltip} from "@mui/material"
-
-// function Card(data){
-//     const {image, follows, title, songs} = data;
-//     return(
-//         // <Tooltip>
-//           <div className={styles.wrapper}>
-//             <div className={styles.card}>
-//                 <img src={image} alt="album" />
-//             {/* <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/365695850/BT/JU/RO/20619026/lord-krishna-playing-flute-canvas-painting.jpg" alt="album" /> */}
-//               <div className={styles.banner}>
-//               </div>
-//             </div>
-//             <div className={styles.titleWrapper}>
-//               <p>{title}</p>
-//             </div>
-//           </div>
-//         // </Tooltip>
-
-
-//     );
-// }
-
-// export default Card;
-
-
 import React from "react";
 import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
@@ -45,10 +17,6 @@ function Card({ data, type }) {
                   className={styles.chip}
                   size="small"
                 />
-                <Chip/>
-                <div className={styles.Chip}>
-                    {`${follows} Follows`}
-                </div>
               </div>
             </div>
             <div className={styles.titleWrapper}>
@@ -60,7 +28,7 @@ function Card({ data, type }) {
     }
 
     case "song": {
-      const { image, likes, title, songs } = data;
+      const { image, likes, title } = data;
       return (
         <div className={styles.wrapper}>
           <div className={styles.card}>
@@ -84,3 +52,5 @@ function Card({ data, type }) {
 }
 
 export default Card;
+
+
